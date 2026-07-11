@@ -3,11 +3,6 @@
 #include <dt-bindings/zmk/mouse.h>
 
 / {
-    sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <>;
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -16,9 +11,6 @@
                 &msc SCRL_UP    // Key 1 (D0): Smooth Scroll Up
                 &msc SCRL_DOWN  // Key 2 (D1): Smooth Scroll Down
             >;
-            
-            // Keeps the sensor mapping empty to match the block above
-            sensor-bindings = <>; 
         };
     };
 };
