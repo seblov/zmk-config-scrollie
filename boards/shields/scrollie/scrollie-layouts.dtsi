@@ -1,0 +1,12 @@
+#include <physical_layouts.dtsi>
+
+/ {
+    physical_layout_scrollie: physical_layout_scrollie {
+        compatible = "zmk,physical-layout";
+        display-name = "Scrollie";
+        keys  //                     w   h    x    y     rot    rx    ry
+            = <&key_physical_attrs 100 100    0    0       0     0     0>
+            , <&key_physical_attrs 100 100    0  100       0     0   100>
+            ;
+    };
+};

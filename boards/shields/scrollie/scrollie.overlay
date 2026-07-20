@@ -1,13 +1,17 @@
-/ {
-    chosen {
-        zmk,kscan = &kscan0;
-    };
+#include "scrollie.dtsi"
 
-    kscan0: kscan_0 {
+/ {
+    kscan0: kscan0 {
         compatible = "zmk,kscan-gpio-direct";
+        wakeup-source;
+
         input-gpios
-            = <&xiao_d 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // Switch 1 on D0
-            , <&xiao_d 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // Switch 2 on D1
+            = <&xiao_d 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&xiao_d 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             ;
     };
+};
+
+&physical_layout_scrollie {
+    kscan = <&kscan0>;
 };

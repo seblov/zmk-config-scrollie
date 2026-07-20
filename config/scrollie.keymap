@@ -7,6 +7,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            display-name = "Base";
             bindings = <
                 &msc SCRL_UP    // Key 1 (D0): Smooth Scroll Up
                 &msc SCRL_DOWN  // Key 2 (D1): Smooth Scroll Down
